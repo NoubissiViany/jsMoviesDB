@@ -13,25 +13,25 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    static: './dist',
+    static: './dist'
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
       clean: true,
-      title: 'Project',
-      template: './src/index.html',
+      title: 'jsMovieDB',
+      template: './src/index.html'
     }),
     new WebpackManifestPlugin(),
     new MiniCssExtractPlugin(),
     new ESLintPlugin({ })
-  ],
+  ]
 }
